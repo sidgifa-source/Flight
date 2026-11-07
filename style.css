@@ -1,0 +1,40 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { overflow: hidden; font-family: 'Segoe UI', Tahoma, sans-serif; background: #000; }
+canvas { display: block; }
+
+#hud {
+  position: fixed; top: 10px; right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #0f0; padding: 12px 16px;
+  border-radius: 8px; font-size: 14px;
+  font-family: monospace; min-width: 200px;
+  border: 1px solid #0f0; z-index: 10;
+}
+.hud-row { display: flex; justify-content: space-between; margin: 3px 0; }
+.hud-row span:last-child { color: #fff; font-weight: bold; }
+
+#controls-hint {
+  position: fixed; bottom: 10px; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #aaa; padding: 8px 16px;
+  border-radius: 6px; font-size: 12px;
+  z-index: 10; white-space: nowrap;
+}
+
+#menu {
+  position: fixed; inset: 0;
+  background: linear-gradient(135deg, #0a1929, #1a3a5c);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: #fff; z-index: 100; gap: 20px;
+}
+#menu h1 { font-size: 48px; margin-bottom: 10px; }
+#menu button {
+  padding: 15px 40px; font-size: 18px;
+  background: #0f0; color: #000;
+  border: none; border-radius: 8px;
+  cursor: pointer; font-weight: bold;
+  transition: transform 0.2s;
+}
+#menu button:hover { transform: scale(1.05); }
