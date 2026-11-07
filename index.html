@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>محاكي الطيران</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="hud">
+    <div class="hud-row"><span>السرعة:</span><span id="speed">0</span> km/h</div>
+    <div class="hud-row"><span>الارتفاع:</span><span id="altitude">0</span> ft</div>
+    <div class="hud-row"><span>الاتجاه:</span><span id="heading">0</span>°</div>
+    <div class="hud-row"><span>الدفع:</span><span id="throttle">0</span>%</div>
+    <div class="hud-row"><span>المرحلة:</span><span id="phase">متوقف</span></div>
+    <div class="hud-row"><span>المطار:</span><span id="airport">-</span></div>
+    <div class="hud-row"><span>المسافة:</span><span id="distance">-</span> km</div>
+  </div>
+
+  <div id="controls-hint">
+    W/S: الأنف | A/D: الميل | Q/E: الانحراف | Shift/Ctrl: الدفع | G: العجلات | F: الرفارف | Space: الفرامل | P: الطيار الآلي
+  </div>
+
+  <div id="menu">
+    <h1>محاكي الطيران</h1>
+    <p>اختر مطار الإقلاع:</p>
+    <button onclick="startGame('HECA')">القاهرة (HECA)</button>
+    <button onclick="startGame('HEAX')">الإسكندرية (HEAX)</button>
+    <button onclick="startGame('HESL')">الأقصر (HESL)</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/airports.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/aircraft.js"></script>
+  <script src="js/physics.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/hud.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
